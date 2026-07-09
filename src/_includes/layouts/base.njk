@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — Wildly Overrun{% else %}Wildly Overrun{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Capital project finance, construction operations, and infrastructure — for the people who run the work.{% endif %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="/" class="logo-link">
+        <img src="/images/logo-white.svg" alt="Wildly Overrun" class="site-logo">
+      </a>
+      <div class="nav-links">
+        <a href="/podcast">podcast</a>
+        <a href="/about">about</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-tag">Wildly Overrun — capital projects, straight talk</span>
+    </div>
+  </footer>
+</body>
+</html>

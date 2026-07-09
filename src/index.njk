@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Wildly Overrun
+---
+<div class="home">
+  <div class="home-hero">
+    <span class="label">capital projects — straight talk</span>
+    <h1>Every project<br>is <span>wildly</span><br>overrun.</h1>
+    <p>A podcast and publication for construction executives, owners, and the people who control the money. No fluff. No consulting speak. Just the reality of running big work.</p>
+  </div>
+
+  <div class="post-list">
+    <span class="section-label">Latest</span>
+    {% for post in collections.posts %}
+      <a href="{{ post.url }}" class="post-list-item">
+        <div class="item-date">{{ post.date | readableDate }}</div>
+        <div class="item-body">
+          {% if post.data.tags %}
+            <div class="item-tags">
+              {% for tag in post.data.tags %}
+                {% if tag != "posts" %}
+                  <span class="tag">{{ tag }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          <div class="item-title">{{ post.data.title }}</div>
+          {% if post.data.description %}
+            <div class="item-deck">{{ post.data.description }}</div>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
