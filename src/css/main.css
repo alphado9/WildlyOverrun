@@ -54,7 +54,7 @@ a:hover { color: var(--heading); }
 .logo-link { display: flex; align-items: center; }
 
 .site-logo {
-  height: 36px;
+  height: 56px;
   width: auto;
 }
 
