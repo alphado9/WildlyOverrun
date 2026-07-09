@@ -120,6 +120,16 @@ a:hover { color: var(--heading); }
   max-width: 52ch;
 }
 
+.home-hero .hero-subtext {
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  font-weight: 400;
+  color: var(--heading);
+  line-height: 1.4;
+  max-width: 40ch;
+  margin-bottom: 0.75rem;
+}
+
 /* ─── POST LIST ──────────────────────────────────────────────── */
 .post-list {
   padding: 3rem 0 6rem;
